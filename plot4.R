@@ -7,9 +7,9 @@ par(mfrow = c(2, 2))
 ## prepare data for charts
 datetime <- strptime(paste(data$Date, data$Time, sep=" "), "%d/%m/%Y %H:%M:%S") 
 globalActivePower <- as.numeric(data$Global_active_power)
-subMetering1 <- as.numeric(data$Sub_metering_1)
-subMetering2 <- as.numeric(data$Sub_metering_2)
-subMetering3 <- as.numeric(data$Sub_metering_3)
+subMetering1 <- as.numeric(as.character(data$Sub_metering_1))
+subMetering2 <- as.numeric(as.character(data$Sub_metering_2))
+subMetering3 <- as.numeric(as.character(data$Sub_metering_3))
 globalReactivePower <- as.numeric(data$Global_reactive_power)
 voltage <- as.numeric(data$Voltage)
 
